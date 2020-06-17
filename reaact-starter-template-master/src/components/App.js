@@ -2,6 +2,6 @@ import React, { Component } from "react";
 
 export default class componentName extends Component {
   render() {
-    return <p>template</p>;
+    return <p>template dfhfghghghd</p>;
   }
 }
