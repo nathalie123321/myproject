@@ -1,15 +1,16 @@
 import React, { Component } from 'react'
 import Sections from "../components/dynamicLayout/Sections"
-import Image from "../img/candleflower.jpg";
+import imageUrls from "../components/carousel/carouselData";
 
 class homePage extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      data: imageUrls,
 
       about: [
         {
-          title: "About me",
+          title: "About me",         
           body: (
             <p>
               Non qui est cupidatat voluptate elit dolore nulla ipsum amet qui
@@ -17,6 +18,7 @@ class homePage extends Component {
               commodo enim cillum qui aliqua sint dolore qui et consectetur.
             </p>
           ),
+
           id: 1,
           colClass: "col-6"
         },
@@ -35,11 +37,7 @@ class homePage extends Component {
       ],
       yogaBidjam: [
         {
-          title: "Yoga Bidjam",
-          image: {
-            imageId: 1,
-            img: "../img/candleflower.jpg"
-        },
+        title: "Yoga Bidjam",       
         body: (
           <p>
             Non qui est cupidatat voluptate elit dolore nulla ipsum amet qui
@@ -67,8 +65,8 @@ class homePage extends Component {
   }
 
     render() {
-      
-      let { about, yogaBidjam} = this.state;
+
+      let { about, yogaBidjam, data } = this.state;
       let { sectionStyles } = this.props;
   
       return (
@@ -84,6 +82,12 @@ class homePage extends Component {
             padding={sectionStyles.paddingTopBottom}
             vals={yogaBidjam}
           />
+            <Sections
+            backgroundColors={sectionStyles.backgroundColors.green}
+            padding={sectionStyles.paddingTopBottom}
+            vals={data}
+          />
+        
         </React.Fragment>
         )
     }

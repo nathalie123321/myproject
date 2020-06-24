@@ -7,7 +7,9 @@ export default class componentName extends Component {
     let pageContent = vals.map((data, idx) => {
       return (
         <div key={idx} id={idx} className={data.colClass}>
+
           <h2>{data.title}</h2>
+    
           {data.body}
 
           {(() => {
