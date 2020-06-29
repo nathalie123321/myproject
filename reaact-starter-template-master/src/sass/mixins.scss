@@ -1,0 +1,64 @@
+// MIXINS
+@mixin transform($property) {
+    -webkit-transform: $property;
+    -ms-transform: $property;
+    transform: $property;
+  }
+  
+  // animations
+  @mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+      @content;
+    }
+    @-moz-keyframes #{$animation-name} {
+      @content;
+    }
+    @-ms-keyframes #{$animation-name} {
+      @content;
+    }
+    @keyframes #{$animation-name} {
+      @content;
+    }
+  }
+  
+  // animation
+  @mixin animation($str) {
+    -webkit-animation: #{$str};
+    -moz-animation: #{$str};
+    -ms-animation: #{$str};
+    animation: #{$str};
+  }
+  
+  // transition
+  @mixin transitions($args...) {
+    -webkit-transition: $args;
+    -moz-transition: $args;
+    -ms-transition: $args;
+    transition: $args;
+  }
+  
+  // border-radius
+  @mixin border-radius($radius) {
+    border-radius: $radius;
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+  }
+  
+  @mixin respond($breakpoint, $direction, $size, $orientation) {
+    @if $breakpoint == non-retina {
+      @media only screen and($direction: $size) and(orientation: $orientation) {
+        @content;
+      }
+    }
+    @if $breakpoint == retina {
+      @media only screen and (-webkit-min-device-pixel-ratio: 2) and ($direction: $size),
+        only screen and (min--moz-device-pixel-ratio: 2) and ($direction: $size),
+        only screen and (-o-min-device-pixel-ratio: 2/1) and ($direction: $size),
+        only screen and (min-device-pixel-ratio: 2) and ($direction: $size),
+        only screen and (min-resolution: 192dpi) and ($direction: $size),
+        only screen and (min-resolution: 2dppx) and ($direction: $size) {
+        @content;
+      }
+    }
+  }
+  

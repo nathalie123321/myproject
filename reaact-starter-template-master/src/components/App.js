@@ -5,6 +5,7 @@ import { Router, Route, Switch } from "react-router-dom";
 import HomePage from "../pages/homePage";
 import Classes from "../pages/classes";
 import Booking from "../pages/booking";
+import Footer from "./common2/Footer";
 
 // components
 
@@ -42,7 +43,9 @@ export default class componentName extends Component {
   render() {
     let { sectionStyles} = this.state;
     return (
-      <React.Fragment>
+   <React.Fragment>
+        <div className="page-container">
+        <div className="content-wrapper">
         <Router history={history}>
           <HamburgerNav/>
           <Switch>
@@ -67,7 +70,10 @@ export default class componentName extends Component {
             />  
           </Switch> 
         </Router> 
-      </React.Fragment>
+        </div>
+        <Footer />
+        </div>
+        </React.Fragment>
     );
   }
 }

@@ -29,7 +29,34 @@ BUTTON STYLES
     text-decoration: none;
   }
   
-  // // hover styles for desktop pc's
+   .banner-buttons-wrapper {
+    position: absolute;
+    top: 350px;
+    margin-top: 20px;
+    left: 350px;
+  }
+
+  .banner-buttons {
+    width: 12px;
+    height: 12px;
+    border: 3px solid $green;
+    background-color: $grey;
+    display: inline-block;
+    border-radius: 50%;
+    margin-left: 5px;
+    margin-right: 5px;
+    cursor: pointer;
+ 
+    &:hover {
+      background-color: $light-grey;
+    }
+  }
+
+  .active {
+    background-color: $light-grey;
+  }
+
+  // hover styles for desktop pc's
   
   // @media (hover: hover) {
   //   .orange-btn {
@@ -70,4 +97,4 @@ BUTTON STYLES
   //   border-radius: $corners-3px;
   // }
   
- 
+  

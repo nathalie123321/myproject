@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Sections from "../components/dynamicLayout/Sections"
-import Image from "../img/candleflower.jpg";
+
 
 class booking extends Component {
   constructor(props) {

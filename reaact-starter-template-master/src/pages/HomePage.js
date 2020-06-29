@@ -1,13 +1,15 @@
 import React, { Component } from 'react'
 import Sections from "../components/dynamicLayout/Sections"
-import imageUrls from "../components/carousel/carouselData";
-
+import Banner from "../components/common/banner"
+import image1 from "../img/earth.jpg";
+import image2 from "../img/candleflower.jpg";
+import { Carousel } from "../components/slider";
+ import { EventSlider } from "../components/eventSlider";
+ 
 class homePage extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: imageUrls,
-
       about: [
         {
           title: "About me",         
@@ -18,47 +20,42 @@ class homePage extends Component {
               commodo enim cillum qui aliqua sint dolore qui et consectetur.
             </p>
           ),
-
           id: 1,
           colClass: "col-6"
         },
         {
           title: "",
           body: (
-            <p>
-              Non qui est cupidatat voluptate elit dolore nulla ipsum amet qui
-              ea excepteur excepteur duis. Fugiat laborum anim reprehenderit
-              commodo enim cillum qui aliqua sint dolore qui et consectetur.
-            </p>
-          ),
+            <React.Fragment>          
+            <img style={{ width: "100%", height: "100%" }} src={image1} />
+            </React.Fragment>
+          ),         
           id: 2,
           colClass: "col-6"
         }
       ],
       yogaBidjam: [
         {
-        title: "Yoga Bidjam",       
-        body: (
-          <p>
-            Non qui est cupidatat voluptate elit dolore nulla ipsum amet qui
-            ea excepteur excepteur duis. Fugiat laborum anim reprehenderit
-            commodo enim cillum qui aliqua sint dolore qui et consectetur.
-          </p>
+  
+          title: "",
+          body: (
+            <React.Fragment>          
+            <img style={{ width: "100%", height: "100%" }} src={image2} />
+            </React.Fragment>
           ),
           id: 1,
           colClass: "col-6"
         },
-        {
-          title: "",
+        {       
+          title: "Yoga Bidjam",       
           body: (
             <p>
               Non qui est cupidatat voluptate elit dolore nulla ipsum amet qui
               ea excepteur excepteur duis. Fugiat laborum anim reprehenderit
               commodo enim cillum qui aliqua sint dolore qui et consectetur.
             </p>
-          ),
-          id: 2,
-          colClass: "col-6"
+            ),
+            id: 2,
         }
       ]
     };
@@ -66,12 +63,12 @@ class homePage extends Component {
 
     render() {
 
-      let { about, yogaBidjam, data } = this.state;
+      let { about, yogaBidjam} = this.state;
       let { sectionStyles } = this.props;
-  
+    
       return (
-        <React.Fragment>
-         
+        <React.Fragment>  
+        <Banner/>
           <Sections
             backgroundColors={sectionStyles.backgroundColors.grey}
             padding={sectionStyles.paddingTopBottom}
@@ -82,12 +79,8 @@ class homePage extends Component {
             padding={sectionStyles.paddingTopBottom}
             vals={yogaBidjam}
           />
-            <Sections
-            backgroundColors={sectionStyles.backgroundColors.green}
-            padding={sectionStyles.paddingTopBottom}
-            vals={data}
-          />
-        
+        <EventSlider />
+       
         </React.Fragment>
         )
     }
