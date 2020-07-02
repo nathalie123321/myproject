@@ -29,11 +29,23 @@ BUTTON STYLES
     text-decoration: none;
   }
   
+
+
+
+
+
    .banner-buttons-wrapper {
+    height: 200px;
+    position: relative;
+  
+  }
+  .center {
+    margin: 0;
     position: absolute;
-    top: 350px;
-    margin-top: 20px;
-    left: 350px;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
   }
 
   .banner-buttons {

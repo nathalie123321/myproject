@@ -9,9 +9,12 @@ const imageUrls = [
   {
     id: 0,
     image: image1,
-    title: "banner 1",
+    title: "Upcoming Events!",
     body:
       "Non qui est cupidatat voluptate elit dolore nulla ipsum amet qui ea excepteur excepteur duis.",
+    title2: "Upcoming Events! Non qui est cupidatat voluptate elit dolore nulla ipsum amet qui ea excepteur excepteur duis.",
+    body2:
+        "Non qui est cupidatat voluptate elit dolore nulla ipsum amet qui ea excepteur excepteur duis. Non qui est cupidatat voluptate elit dolore nulla ipsum amet qui ea excepteur excepteur duis.",
     hasButton: true,
     class: "button orange-btn",
     target: "_blank",
@@ -57,20 +60,8 @@ const imageUrls = [
     buttonLink: "http://www.google.com",
     buttonTitle: "read more",
     isActive: false
-  },
-  {
-    id: 4,
-    image: image5,
-    title: " banner 5",
-    body:
-      "Non qui est cupidatat voluptate elit dolore nulla ipsum amet qui ea excepteur excepteur duis.",
-    hasButton: true,
-    class: "button orange-btn",
-    buttonLink: "http://www.google.com",
-    target: "_blank",
-    buttonTitle: "read more",
-    isActive: false
   }
+  
 ];
 
 export default imageUrls;

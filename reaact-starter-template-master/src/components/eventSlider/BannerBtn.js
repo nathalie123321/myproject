@@ -22,7 +22,11 @@ class BannerBtn extends Component {
       );
     });
 
-    return <div className="banner-buttons-wrapper">{buttons}</div>;
+    return <div className="banner-buttons-wrapper">
+      <div className="center">
+      {buttons}
+      </div>
+      </div>;
   }
 }
 

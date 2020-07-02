@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+
 class hamburgerNav extends Component {
   constructor(props) {
     super(props);
@@ -116,6 +117,7 @@ class hamburgerNav extends Component {
         </nav>
        </div>
       </header>
+
       </React.Fragment>
     );
   }

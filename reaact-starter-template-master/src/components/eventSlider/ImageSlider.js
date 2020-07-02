@@ -4,17 +4,20 @@ export default class componentName extends Component {
   render() {
     let { data } = this.props;
     return (
-        <div>
-        <h1>{data.title}</h1>
-        <div className="event-slider-placeholder" >      
-        <div className="event-slider" id={data.id} style={{ backgroundImage: `url(${data.image})`}}>
-            </div> 
-            <h2>{data.title}</h2>
+      <React.Fragment>
+      <div className="container">
+        <div className="row" >   
+          <h1>{data.title}</h1>
           <p>{data.body}</p>
-            </div> 
-            </div>
-          ); 
-   
-
-  }
-}
+        <div className="event-img" id={data.id} style={{ backgroundImage: `url(${data.image})`}}>
+           
+        </div>
+        <h2>{data.title2}</h2>
+          <p>{data.body2}</p>
+        </div>
+        </div>
+       
+        </React.Fragment>
+          );
+        }
+      }

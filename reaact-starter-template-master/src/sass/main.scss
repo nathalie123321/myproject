@@ -1,11 +1,13 @@
 //
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Roboto:wght@300;500;700;900&display=swap");
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Indie+Flower&family=Lato:wght@400;700&family=Roboto&family=Yatra+One&display=swap');
+
+//@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Roboto:wght@300;500;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
 @import "colors", "simple-grid", "typography", "buttons", "mixins";
 body {
   height: 100%;
-  width: 100%;
-  margin: 0;
+  width: 100%;                   
   padding: 0;
   left: 0;
   top: 0;
@@ -13,12 +15,12 @@ body {
 }
 
 .banner{
-  background-color:$grey;
+  background-image: url("../img/waterlily.jpg");
+  background-repeat : round;
 }
 
 
 $transition: ease-in-out 0.3s all;
-
 
 .carousel {
   width: 100%;
@@ -28,75 +30,21 @@ $transition: ease-in-out 0.3s all;
   background-color: $white;
   overflow: hidden;
   background-repeat: no-repeat;
+  padding-bottom: 40px;
  
 }
-//   .nextBtn,
-//   .backBtn {
-//     position: absolute;
-//     top: 45%;
-//   }
-//   .nextBtn {
-//     display: block;
-//     z-index: 1000;
-//     width: 20px;
-//     height: 20px;
-//     padding: 10px;
-//     right: 40px;
-//     transition: $transition;
+.event-img{
+  width: 100%;
+  min-height: 300px;
+  max-height: 350px;
+  position: relative;
+  background-color: $white;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: contain;
+}
 
-//     &.green {
-//       background-color: $green;
-
-//       &:hover {
-//         background-color: $black;
-//       }
-//     }
-
-
-//     &:after {
-//       content: "";
-//       display: block;
-//       background-image: url("../img/arrow.svg");
-//       width: 20px;
-//       height: 20px;
-//       background-repeat: no-repeat;
-//       @include transform(rotate(180deg));
-//       margin-left: -3px;
-//       cursor: pointer;
-//     }
-//   }
-
-//   .backBtn {
-//     display: block;
-//     z-index: 1000;
-//     @include border-radius(50%);
-//     width: 20px;
-//     height: 20px;
-//     padding: 10px;
-//     left: 40px;
-//     transition: $transition;
-
-
-//     &.green {
-//       background-color: $green;
-
-//       &:hover {
-//         background-color: $black;
-//       }
-//     }
-
-//     &:after {
-//       content: "";
-//       display: block;
-//       background-image: url("../img/arrow.svg");
-//       width: 20px;
-//       height: 20px;
-//       background-repeat: no-repeat;
-//       margin-left: 2px;
-//       cursor: pointer;
-//     }
-//   }
-// }
 /* -----------------------------------------------------------------
     HEADER
 ------------------------------------------------------------------- */
@@ -145,7 +93,7 @@ $transition: ease-in-out 0.6s;
 .header a {
   color: $black;
   text-decoration: none;
-  font-family: $roboto-condensed;
+  font-family: $dancing-script;
   text-transform: uppercase;
   text-align: center;
   padding: 10px;
@@ -238,23 +186,9 @@ $transition: ease-in-out 0.6s;
   margin: auto;
   width: 100%;
   height: 250px;
+
 }
 
-.event-slider{
-  width: 100%;
-  height: 100%;
-  position: relative;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding-top:20px;
-  padding-bottom:20px;
-  padding-right: 5px;
-  padding-left: 5px;
-}
-.event-slider h1{
-  text-align: center;
-}
 
 /* -----------------------------------------------------------------
     SECTION COLORS
@@ -305,4 +239,165 @@ $transition: ease-in-out 0.6s;
 
 .main-footer{
  background-color:$light-grey;
+ color: $black;
+ padding-top: 3em;
+ position: relative;
+ bottom:0;
+ width:100%;
+}
+
+.page-container{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.content-wrapper{
+  flex:1;
+}
+.copy{
+  color:$white;
+  background-color: $black;
+  text-align: center;
+}
+.scroll-to-top div {
+  position: fixed;
+  bottom: 80px;
+  right: 40px;
+  z-index: 3000;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: block;
+  cursor: pointer;
+  &.sTt {
+    background-color: $green;
+
+    &:hover {
+      background-color: $green;
+    }
+  
+    &:after {
+      content: "";
+      display: block;
+      background-image: url("../img/icons/arrowUp.svg");
+      width: 40px;
+      height:40px;
+      background-repeat: no-repeat;
+      cursor: pointer;
+    }
+  }
+}
+.list-unstyled{
+  display:inline-block;
+}
+.icons-text{
+  margin-left: 25px;
+}
+.icon1{
+background-repeat: no-repeat;
+}
+.icon2{
+  background-repeat: no-repeat;
+}
+.col ul {
+  margin-left: -20px;
+}
+.col ul li {
+  list-style-type: none;
+ 
+  display:block;
+}
+
+.faqs {
+  width: 100%;
+  max-width: 768;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+.faqs .faq {
+  margin: 15px;
+  padding:15px;
+  background-color: $grey;
+  color:$black;
+  border-radius: 4px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+  
+}
+
+.faqs .faq .faq-mainTitle{
+  position: relative;
+  font-size: 18px;
+  padding-right: 80px;
+  transition: all 0.3s ease;
+  font-weight: 800;
+
+}
+.faqs .faq .faq-title,
+.faqs .faq .faq-title2,
+.faqs .faq .faq-title3{
+  position: relative;
+  font-size: 15px;
+  padding-right: 80px;
+  transition: all 0.3s ease;
+  font-weight: 800;
+
+}
+.faqs .faq .faq-mainTitle::after{
+content: '';
+position: absolute;
+top:50%;
+right:0px;
+transform: translateY(-50%);
+width:30px;
+height:30px;
+background-image: url('../img/icons/plus.svg');
+background-position: center;
+background-size: contain;
+background-repeat: no-repeat;
+transition: all 0.3s ease;
+
+}
+
+.faqs .faq .faq-title,
+.faq-text1,
+.faq-text2,
+.faq-text3,
+.faq-title2,
+.faq-text4,
+.faq-title3,
+.faq-text5  {
+opacity: 0;
+max-height: 0;
+overflow-y: hidden;
+
+}
+
+.faqs .faq.open .faq-mainTitle{
+margin-bottom: 15px;
+}
+
+.faqs .faq.open .faq-mainTitle::after{
+transform: translateY(-50%);
+
+}
+
+.faqs .faq.open .faq-title, 
+.faqs .faq.open .faq-text1, 
+.faqs .faq.open .faq-text2, 
+.faqs .faq.open .faq-text3,
+.faqs .faq.open .faq-title2,
+.faqs .faq.open .faq-text4,
+.faqs .faq.open .faq-title3,
+.faqs .faq.open .faq-text5 {
+  max-height: 1000px;
+  opacity: 1;
+}
+.Footer2{
+  background-color:$light-grey;
+  color: $black;
+  padding-top: 3em;
+  position: relative;
+  bottom:0;
+  width:100%;
 }

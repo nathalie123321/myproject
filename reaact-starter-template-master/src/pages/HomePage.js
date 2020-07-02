@@ -5,7 +5,7 @@ import image1 from "../img/earth.jpg";
 import image2 from "../img/candleflower.jpg";
 import { Carousel } from "../components/slider";
  import { EventSlider } from "../components/eventSlider";
- 
+import Footer2 from "../components/common/Footer2";
 class homePage extends Component {
   constructor(props) {
     super(props);
@@ -69,6 +69,7 @@ class homePage extends Component {
       return (
         <React.Fragment>  
         <Banner/>
+       
           <Sections
             backgroundColors={sectionStyles.backgroundColors.grey}
             padding={sectionStyles.paddingTopBottom}
@@ -80,7 +81,7 @@ class homePage extends Component {
             vals={yogaBidjam}
           />
         <EventSlider />
-       
+          <Footer2 />
         </React.Fragment>
         )
     }

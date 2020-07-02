@@ -5,8 +5,14 @@
 --------------------------------------------------------------------------------------*/
 
 // fonts
+$dancing-script: 'Dancing Script', cursive;
+$indie-flower: 'Indie Flower', cursive;
+$lato: 'Lato', sans-serif;
+$roboto: 'Roboto', sans-serif;
+$yatra-one: 'Yatra One', cursive;
+
 $roboto: "Roboto", sans-serif;
-$open-sans: "Open Sans", sans-serif;
+$open-sans: "SansOpen ", sans-serif;
 $roboto-condensed: "Roboto Condensed", sans-serif;
 
 // font weights
@@ -25,7 +31,7 @@ html {
 }
 body {
   background-color: $white;
-  font-family: $open-sans;
+  font-family: $lato;
   font-weight: $regular-weight;
   color: $grey;
   line-height: 1.65em;
@@ -33,19 +39,24 @@ body {
   margin: 0px;
 }
 p {
+  font-family: $lato;
   margin-bottom: 1.15rem;
 }
 
 h1,
-h2,
-h3,
-h4,
-h5 {
+h2
+{
  
-  font-family: $roboto-condensed;
+  font-family: $dancing-script;
   line-height: 1.15;
 }
+h2
 
+h4,
+h5 {
+  font-family: $roboto;
+  line-height: 1.15;
+}
 h1 {
   margin-top: 0;
   font-size: 1.802em;

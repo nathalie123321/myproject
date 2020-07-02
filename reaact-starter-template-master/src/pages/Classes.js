@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Sections from "../components/dynamicLayout/Sections"
 import classData from '../components/carousel/data';
 import Banner from "../components/common/banner"
-
+import Footer2 from "../components/common/Footer2";
 class classes extends Component {
   constructor(props) {
     super(props);
@@ -41,6 +41,7 @@ class classes extends Component {
             padding={sectionStyles.paddingTopBottom}
             vals={classData.organisation}
           /> 
+           <Footer2 />
         </React.Fragment>
         )
     }
