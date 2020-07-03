@@ -1,7 +1,48 @@
 // My colors
-
 $white: rgba(255, 255, 255, 1);
 $light-grey: rgba(232, 232, 232, 1);
 $grey: rgba(136, 130, 130, 1);
 $black: rgba(23, 23, 23, 1);
 $green: rgba(154, 191, 117, 1);
+
+/* -----------------------------------------------------------------
+    SECTION COLORS
+------------------------------------------------------------------- */
+
+  // fonts
+  .white-color {
+    color: $white;
+  }
+  .light-grey-color {
+    color: $light-grey;
+  }
+  .grey-color {
+    color: $grey;
+  }
+  .black-color {
+    color: $black;
+  }
+  
+  // backgrounds
+  .green {
+    background-color: $green;
+    color: $white;
+  }
+  .white {
+    background-color: $white;
+    color: $black;
+  }
+  .grey{
+    background-color: $grey;
+    color: $white;
+  }
+  .light-grey {
+    background-color: $light-grey;
+    color: $black;
+  }
+
+  // sets padding for sections
+  .padding-top-bottom {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }

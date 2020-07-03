@@ -139,27 +139,27 @@ class booking extends Component {
         <React.Fragment>
          
           <Sections
-            backgroundColors={sectionStyles.backgroundColors.grey}
+       
             padding={sectionStyles.paddingTopBottom}
             vals={privat}
           />
            <Sections
-            backgroundColors={sectionStyles.backgroundColors.green}
+           
             padding={sectionStyles.paddingTopBottom}
             vals={group}
           />
             <Sections
-            backgroundColors={sectionStyles.backgroundColors.green}
+  
             padding={sectionStyles.paddingTopBottom}
             vals={online}
           />
             <Sections
-            backgroundColors={sectionStyles.backgroundColors.green}
+          
             padding={sectionStyles.paddingTopBottom}
             vals={custom}
           />
             <Sections
-            backgroundColors={sectionStyles.backgroundColors.green}
+      
             padding={sectionStyles.paddingTopBottom}
             vals={organisation}
           />

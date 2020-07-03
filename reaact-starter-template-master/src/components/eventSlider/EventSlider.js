@@ -64,15 +64,12 @@ class EventSlider extends Component {
     let data = imageUrls[pageNum];
     return (     
         <section className="padding-top-bottom">
-        <div className="carousel">         
-             
+                         
         <ImageSlider data={data} />
-        <BannerBtn class="row" data={buttonData} click={this.addActiveClass} /> 
-       
-      </div>
+        <BannerBtn class="row" data={buttonData} click={this.addActiveClass} />      
+     
       </section>
     );
   }
 }
-
 export default EventSlider;

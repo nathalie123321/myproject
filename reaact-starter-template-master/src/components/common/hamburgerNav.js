@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-
+import logoImg from "../../img/logo.jpg";
 class hamburgerNav extends Component {
   constructor(props) {
     super(props);
@@ -15,10 +15,6 @@ class hamburgerNav extends Component {
     this.setActiveStyle();
   };
 
-  // UNSAFE_componentWillMount = () => {
-  //   this.setActiveStyle();
-  // };
-
   animateMenu = () => {
     this.setActiveStyle();
     this.setState({ open: !this.state.open });
@@ -30,95 +26,79 @@ class hamburgerNav extends Component {
     this.setState({ path: currentUrl });
   };
 
-  render() {
- 
-    // this.setActiveStyle();
-
-    let { open, path, title } = this.state;
+render() {
+  let { open, path, title } = this.state;
     return (
-        <React.Fragment>
-        <div className="header-top">
-        </div>
-        <header className="header"> 
-        <div className="container"> 
-          <div className="col-12">
-          <div id="nav-icon" className={open ? "open" : "closed"} onClick={this.animateMenu}
-        >
+    <React.Fragment>
+      <div className="header-top">   </div>  
+      <header className="header"> 
+      <div className="container"> 
+      <div className="col-12">
+        <div id="nav-icon" className={open ? "open" : "closed"} onClick={this.animateMenu}>
           <span></span>
           <span></span>
           <span></span>
         </div>
-            <div className="col-2" id="logo">
-            <h1 className={title.color}>
-            {title.value ? title.value : "Yoga Bidjam"}
-            </h1>           
-          </div>
-        </div>
+        <div className="col-3 padding-top-bottom" id="logo" style={{backgroundImage: `url(${logoImg})`, backgroundRepeat: "no-repeat"}} > 
         
-        <nav onClick={this.animateMenu}
+        </div>
+      </div>
+      
+      <nav onClick={this.animateMenu}
          className={open ? "visible" : "hidden"}>
-            {(() => {
-
-            if (path === "/") {
+           {(() => {
+             if (path === "/") {
                 return (
                 <Link className="active" to="/">
-                    <span className="home-icon" />
-                    Home
+                  <h2>Home</h2>  
                 </Link>
                 );
-            } 
-            else {
+              } else {
                 return (
                 <Link to="/">
-                    <span className="home-icon" />
-                    Home
+                  <h2>Home</h2>  
                 </Link>
                 );
-            }
-          })()}
-
-          {(() => {
-            if (path === "/classes") {
+              }
+            })()}
+            
+           {(() => {
+             if (path === "/classes") {
                 return (
                 <Link className="active" to="/classes">
-                    <span className="classes-icon" />
-                    Classes
+                  <h2>Classes</h2>
                 </Link>
                 );
-            } 
-            else {
-              return (
+              } else {
+                return (
                 <Link to="/classes">
-                    <span className="classes-icon" />
-                    Classes
+                  <h2>Classes</h2>  
                 </Link>
                 );
-            }
-          })()}
-
-          {(() => {
-            if (path === "/booking") {
-              return (
+              }
+            })()}
+            
+           {(() => {
+             if (path === "/booking") {
+                return (
                 <Link className="active" to="/booking">
-                    <span className="booking-icon" />
-                    Booking
+                  <h2>Booking</h2>  
                 </Link>
-              );
-            } 
-            else {
-              return (
-                <Link to="/booking">  
-                 <span className="booking-icon" />               
-                  Booking
+                );
+              } else {
+                return (
+                <Link to="/booking">
+                  <h2>Booking</h2> 
                 </Link>
-              );
-            }
-          })()}
+                );
+              }
+            })()}
+            
         </nav>
-       </div>
-      </header>
-
-      </React.Fragment>
+      </div>
+    </header>
+   
+  </React.Fragment>
     );
   }
 }

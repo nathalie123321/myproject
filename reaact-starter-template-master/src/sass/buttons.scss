@@ -29,14 +29,11 @@ BUTTON STYLES
     text-decoration: none;
   }
   
-
-
-
-
-
    .banner-buttons-wrapper {
-    height: 200px;
+    height: 30px;
     position: relative;
+    margin-top: 20px;
+    margin-bottom: 40px;
   
   }
   .center {
@@ -83,20 +80,7 @@ BUTTON STYLES
   //       background-color: $dark-grey;
   //     }
   //   }
-  
-  //   .grey-btn {
-  //     @include align-center;
-  //     color: $white;
-  //     cursor: $pointer;
-  //     padding: $default-padding;
-  //     background-color: $dark-grey;
-  //     border-radius: $corners-3px;
-  
-  //     &:hover {
-  //       background-color: $dark-orange;
-  //     }
-  //   }
-  // }
+
   
   // // button styles for mobile devices
   // .green-btn {

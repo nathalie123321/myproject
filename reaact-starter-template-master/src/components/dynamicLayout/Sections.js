@@ -2,14 +2,12 @@ import React, { Component } from "react";
 import DynamicCols from "./dynamicCols";
 class Sections extends Component {
   render() {
-    let { vals, backgroundColor, padding } = this.props;
-
-   
-
-    let paddingLocal = padding ? padding : "";
+    let { vals, backgroundColor, color, padding } = this.props;
+    let fontColor = color ? color : "";
+    let paddingTopBottom = padding ? padding : "";
     let backgroundColorLocal = backgroundColor ? backgroundColor : "";
     return (
-      <section className={backgroundColorLocal + " " + paddingLocal}>
+      <section className={backgroundColorLocal + " " + paddingTopBottom + " " + fontColor}>
         <div className="container">
           <DynamicCols vals={vals}/>
         </div>

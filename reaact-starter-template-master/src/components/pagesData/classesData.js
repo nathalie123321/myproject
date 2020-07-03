@@ -7,11 +7,9 @@ import image5 from "../../img/earth.jpg";
 
 
 const privat = [
-{
-      title: "",
-      body: (
+{      body: (
         <React.Fragment>          
-        <img style={{ width: "100%", height: "100%" }} src={image1} />
+        <img className="img-style" src={image1} />
         </React.Fragment>
       ),
       id: 1,
@@ -34,7 +32,7 @@ const privat = [
     {    
       body: (
         <React.Fragment>          
-        <img style={{ width: "100%", height: "100%" }} src={image2} />
+        <img className="img-style" src={image2} />
         </React.Fragment>
       ),
       id: 1,
@@ -58,7 +56,7 @@ const privat = [
      
       body: (
         <React.Fragment>          
-        <img style={{ width: "100%", height: "100%" }} src={image3} />
+        <img className="img-style"  src={image3} />
         </React.Fragment>
       ),
       id: 1,
@@ -81,7 +79,7 @@ const privat = [
     {
       body: (
         <React.Fragment>          
-        <img style={{ width: "100%", height: "100%" }} src={image4} />
+        <img className="img-style"  src={image4} />
         </React.Fragment>
       ),
       id: 1,
@@ -104,7 +102,7 @@ const privat = [
     {
       body: (
         <React.Fragment>          
-        <img style={{ width: "100%", height: "100%" }} src={image5} />
+        <img className="img-style"  src={image5} />
         </React.Fragment>
       ),
       id: 1,

@@ -10,10 +10,10 @@ export default class ScrollToTop extends Component {
   componentDidMount = () => {
     let scrollComponent = this;
     document.addEventListener("scroll", function (e) {
-      scrollComponent.toggleVsisible();
+      scrollComponent.toggleVisible();
     });
   };
-  toggleVsisible = () => {
+  toggleVisible = () => {
     if (window.pageYOffset > 150) {
       this.setState({ isVisible: true });
     } else {
@@ -23,7 +23,6 @@ export default class ScrollToTop extends Component {
   scrollToTop = () => {
     window.scrollTo({
       top: 0
-      
     });
   };
 
