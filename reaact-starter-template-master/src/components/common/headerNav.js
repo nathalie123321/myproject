@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import logoImg from "../../img/logo.jpg";
-class hamburgerNav extends Component {
+class headerNav extends Component {
   constructor(props) {
     super(props);
     this.state = { 
@@ -11,18 +11,18 @@ class hamburgerNav extends Component {
     };
   }
 
+//setting the style for active
+
   componentDidMount = () => {
     this.setActiveStyle();
   };
 
   animateMenu = () => {
-    this.setActiveStyle();
     this.setState({ open: !this.state.open });
   };
 
   setActiveStyle = () => {
     let currentUrl = window.location.pathname;
-    console.log("current url : " + currentUrl);
     this.setState({ path: currentUrl });
   };
 
@@ -39,8 +39,7 @@ render() {
           <span></span>
           <span></span>
         </div>
-        <div className="col-3 padding-top-bottom" id="logo" style={{backgroundImage: `url(${logoImg})`, backgroundRepeat: "no-repeat"}} > 
-        
+        <div className="col-3 padding-top-bottom" id="logo" style={{backgroundImage: `url(${logoImg})`, backgroundRepeat: "no-repeat"}} >        
         </div>
       </div>
       
@@ -102,4 +101,4 @@ render() {
     );
   }
 }
-export default hamburgerNav;
+export default headerNav;

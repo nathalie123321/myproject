@@ -1,25 +1,20 @@
-
 import image1 from "../../img/space.jpg";
 import image2 from "../../img/sky.jpg";
 import image3 from "../../img/water.jpg";
 import image4 from "../../img/flame.jpg";
 import image5 from "../../img/earth.jpg";
 
-const imageUrls = [
+const eventData = [
   {
+    
     id: 0,
     image: image1,
     title: "Upcoming Events!",
     body:
       "Non qui est cupidatat voluptate elit dolore nulla ipsum amet qui ea excepteur excepteur duis.",
-    title2: "Upcoming Events! Non qui est cupidatat voluptate elit dolore nulla ipsum amet qui ea excepteur excepteur duis.",
+    title2: "Upcoming Events! Non qui est cupidatat voluptate elit dolore.",
     body2:
         "Non qui est cupidatat voluptate elit dolore nulla ipsum amet qui ea excepteur excepteur duis. Non qui est cupidatat voluptate elit dolore nulla ipsum amet qui ea excepteur excepteur duis.",
-    hasButton: true,
-    class: "button orange-btn",
-    target: "_blank",
-    buttonLink: "http://www.google.com",
-    buttonTitle: "read more",
     isActive: false
   },
   {
@@ -27,15 +22,10 @@ const imageUrls = [
     image: image2,
     title: "Upcoming Events!",
     body:
-      "Non qui est cupidatat voluptate elit dolore nulla ipsum amet qui ea excepteur excepteur duis.",
-      title2: "Upcoming Events! Non qui est cupidatat voluptate elit dolore nulla ipsum amet qui ea excepteur excepteur duis.",
+      "Non qui est cupidatat voluptate elit dolore nulla.",
+      title2: "Upcoming Events! Non qui est cupidatat voluptate elit.",
     body2:
-        "Non qui est cupidatat voluptate elit dolore nulla ipsum amet qui ea excepteur excepteur duis. Non qui est cupidatat voluptate elit dolore nulla ipsum amet qui ea excepteur excepteur duis.",
-    hasButton: true,
-    class: "button orange-btn",
-    target: "_blank",
-    buttonLink: "http://www.google.com",
-    buttonTitle: "read more",
+        "Non qui est cupidatat voluptate elit dolore nulla ipsum amet qui ea excepteur excepteur duis.",
     isActive: false
   },
   {
@@ -43,15 +33,11 @@ const imageUrls = [
     image: image3,
     title: "Upcoming Events!",
     body:
-      "Non qui est cupidatat voluptate elit dolore nulla ipsum amet qui ea excepteur excepteur duis.",
+      "Non qui est cupidatat voluptate elit dolore nulla ipsum amet qui ea excepteur.",
       title2: "Upcoming Events! Non qui est cupidatat voluptate elit dolore nulla ipsum amet qui ea excepteur excepteur duis.",
     body2:
         "Non qui est cupidatat voluptate elit dolore nulla ipsum amet qui ea excepteur excepteur duis. Non qui est cupidatat voluptate elit dolore nulla ipsum amet qui ea excepteur excepteur duis.",
-    hasButton: true,
-    class: "button orange-btn",
-    target: "_blank",
-    buttonLink: "http://www.google.com",
-    buttonTitle: "read more",
+ 
     isActive: false
   },
   {
@@ -59,18 +45,14 @@ const imageUrls = [
     image: image4,
     title: "Upcoming Events!",
     body:
-      "Non qui est cupidatat voluptate elit dolore nulla ipsum amet qui ea excepteur excepteur duis.",
-      title2: "Upcoming Events! Non qui est cupidatat voluptate elit dolore nulla ipsum amet qui ea excepteur excepteur duis.",
+      "Non qui est cupidatat voluptate elit dolore.",
+      title2: "Non qui est cupidatat voluptate elit dolore nulla ipsum amet qui ea excepteur excepteur duis.",
     body2:
         "Non qui est cupidatat voluptate elit dolore nulla ipsum amet qui ea excepteur excepteur duis. Non qui est cupidatat voluptate elit dolore nulla ipsum amet qui ea excepteur excepteur duis.",
-    hasButton: true,
-    class: "button orange-btn",
-    target: "_blank",
-    buttonLink: "http://www.google.com",
-    buttonTitle: "read more",
+
     isActive: false
   }
   
 ];
 
-export default imageUrls;
+export default eventData;

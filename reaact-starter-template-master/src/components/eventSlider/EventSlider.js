@@ -1,19 +1,15 @@
 import React, { Component } from "react";
-import {
-  ImageSlider,
-  BannerBtn
-} from "../eventSlider/";
+import { ImageSlider, SliderBtn } from "../eventSlider/";
 
-import imageUrls from "./sliderData";
-
+import eventData from "./sliderData";
 class EventSlider extends Component {
   constructor(props) {
     super(props);
     this.state = {
       pageNum: 0,
-      maxIndex: imageUrls.length - 1,   
-      buttonData: imageUrls,
-      data: imageUrls
+      maxIndex: eventData.length - 1,   
+      buttonData: eventData,
+      data: eventData
     };
   }
 
@@ -54,20 +50,17 @@ class EventSlider extends Component {
     } else {
       newData[pageNumber].isActive = true;
     }
-
     this.setState({ data: newData });
     this.setState({ pageNum: pageNumber });
   };
 
   render() {
     let { pageNum, buttonData } = this.state;
-    let data = imageUrls[pageNum];
+    let data = eventData[pageNum];
     return (     
-        <section className="padding-top-bottom">
-                         
+      <section className="padding-top-bottom">
         <ImageSlider data={data} />
-        <BannerBtn class="row" data={buttonData} click={this.addActiveClass} />      
-     
+        <SliderBtn class="row" data={buttonData} click={this.addActiveClass} />          
       </section>
     );
   }

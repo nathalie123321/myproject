@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 
-function Faq ({faq, index, toggleFaq}) {
+function DropDownMenu ({faq, index, toggleDropDown}) {
     return (
     <div className={"faq " + (faq.open ? 'open' : '')} 
     key={index} 
-    onClick={() => toggleFaq(index)}
+    onClick={() => toggleDropDown(index)}
     >
         <div className="faq-mainTitle">
             {faq.mainTitle}
@@ -36,4 +36,4 @@ function Faq ({faq, index, toggleFaq}) {
     </div>
     );
 }
-export default Faq;
+export default DropDownMenu;

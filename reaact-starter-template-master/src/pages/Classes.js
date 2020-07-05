@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Sections from "../components/dynamicLayout/Sections"
 import classData from '../components/pagesData/classesdata';
-import Footer2 from "../components/common/Footer2";
+
 class classes extends Component {
   constructor(props) {
     super(props);
@@ -15,33 +15,26 @@ class classes extends Component {
       let { sectionStyles } = this.props;
       return (
         <React.Fragment>           
-           <Sections     
-        
+           <Sections            
             padding={sectionStyles.paddingTopBottom}
-            vals={classData.privat}
+            vals={data.privat}
+          />
+            <Sections        
+            padding={sectionStyles.paddingTopBottom}
+            vals={data.group}
           />
             <Sections
-        
             padding={sectionStyles.paddingTopBottom}
-            vals={classData.group}
+            vals={data.online}
           />
-            <Sections
-       
+            <Sections       
             padding={sectionStyles.paddingTopBottom}
-            vals={classData.online}
+            vals={data.custom}
           />
-            <Sections
-        
+            <Sections       
             padding={sectionStyles.paddingTopBottom}
-            vals={classData.custom}
-          />
-            <Sections
-        
-            padding={sectionStyles.paddingTopBottom}
-            vals={classData.organisation}
-          /> 
-          
-           <Footer2 />
+            vals={data.organisation}
+          />      
         </React.Fragment>
         )
     }

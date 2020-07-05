@@ -1,14 +1,17 @@
 import React, {useState} from "react";
-import Faq from "./Faq";
+import DropdownMenu from "./DropdownMenu";
 
 import icon1 from "../../img/icons/gps.svg";
 import icon2 from "../../img/icons/envelope.svg";
 import icon3 from "../../img/icons/phone.svg";
+import icon4 from "../../img/icons/Instagram.svg";
+import icon5 from "../../img/icons/youtube.svg";
+import logoImg from "../../img/logoFot.jpg";
 
-
-function Footer2 () {
-  const [faqs, setfaqs] = useState([
-      {  mainTitle: "ABOUT US",
+function FooterMobTab () {
+  const [faqs, setprops] = useState([
+      {
+        mainTitle: "ABOUT US",
          title:(
             <div className="icon" style={{ backgroundImage: `url(${icon1})`}}>
                 <div className="icons-text"><p>Adress:</p></div>             
@@ -51,8 +54,8 @@ function Footer2 () {
       },    
     ]);
 
-    const toggleFaq = index =>{
-        setfaqs(faqs.map((faq,i) =>{
+    const toggleDropDown = index =>{
+        setprops(faqs.map((faq,i) =>{
             if ( i === index) {
                faq.open = !faq.open 
             } else{
@@ -64,18 +67,40 @@ function Footer2 () {
    
 return (
   <React.Fragment>
- <div className="Footer2">
-     <div className="container">
-    <div className="faqs">
-        {faqs.map((faq, i) => (
-            <Faq faq={faq} index={i} toggleFaq={toggleFaq} />          
-        ))}
+    <div className="footerMobTab">
+      <div className="container">
+        <div className="row">
+          <div className="faqs">
+            {faqs.map((faq, i) => (
+            <DropdownMenu faq={faq} index={i} toggleDropDown={toggleDropDown} />
+            ))}
+            </div>
+            <div className="col-4" style={{float:"left"}}>
+              <h4>FOLLOW US</h4>
+              <ul className="list-unstyled">
+                <div className="icon" style={{ backgroundImage: `url(${icon4})`}}>
+                  <li>Instagram</li>
+                </div>
+                  <br></br>
+                <div className="icon" style={{ backgroundImage: `url(${icon5})`}}>
+                  <li>Youtube</li>
+                </div>
+              </ul>
+          </div>
         </div>
-    </div>
- </div>
+      </div>
+      <div className="copy">
 
+          
+<p className="container">
+    &copy;{new Date().getFullYear()} YOGA BIDJAM | All right reserved | Terms Of Service | Privacy
+</p>
+
+
+</div>
+    </div>
  </React.Fragment>
  );
 }
 
-export default Footer2;
+export default FooterMobTab;

@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-
-class BannerBtn extends Component {
+class SliderBtn extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -12,8 +11,7 @@ class BannerBtn extends Component {
     const { data } = this.state;
     let buttons = data.map((data, idx) => {
       return (
-        <a
-          title={data.title}
+        <a        
           className={data.isActive ? "banner-buttons active" : "banner-buttons"}
           key={data.id}
           id={data.id}
@@ -22,12 +20,14 @@ class BannerBtn extends Component {
       );
     });
 
-    return <div className="banner-buttons-wrapper">
+    return (
+    <div className="banner-buttons-wrapper">
       <div className="center">
-      {buttons}
+        {buttons}
       </div>
-      </div>;
+    </div>
+      );
   }
 }
 
-export default BannerBtn;
+export default SliderBtn;

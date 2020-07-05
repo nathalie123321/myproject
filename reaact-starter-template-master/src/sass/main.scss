@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Indie+Flower&family=Lato:wght@400;700&family=Roboto&family=Yatra+One&display=swap');
-@import "colors", "simple-grid", "typography", "buttons", "mixins";
+@import "colors", "simple-grid", "typography", "buttons";
 body {
   height: 100%;
   width: 100%;                   
@@ -9,33 +9,39 @@ body {
   font-size: 100%;
 }
 
+/* -----------------------------------------------------------------
+    BANNER
+------------------------------------------------------------------- */
+
 .banner{
   background-image: url("../img/waterlily.jpg");
   background-repeat : round;
+  width: 100%;
+  height:300px;
 }
 
+.banner-content{
+  text-align: center;
+  color: $white;
+  padding-top: 40px;
+}
 $transition: ease-in-out 0.3s all;
 
-.event-img{
-  width: 100%;
-  min-height: 200px;
-  max-height: 350px;
+.slide-img{
+  min-height: 220px;
   position: relative;
   overflow: hidden;
   background-repeat: no-repeat;
-  margin-bottom: 40px;
-  background-position: top;
+  margin-bottom: 30px;
+  background-position: center;
   background-size: contain;
 }
 
 /* -----------------------------------------------------------------
-    HEADER
+    HEADER/NAV
 ------------------------------------------------------------------- */
 $transition: ease-in-out 0.6s;
 
-.panel {
-  transition: $transition;
-}
 .header-top {
   background-color: $green;
   height: 60px;
@@ -52,9 +58,7 @@ $transition: ease-in-out 0.6s;
   z-index: 3001;
   padding-top: 10px;
 }
-.header div.container {
-  position: relative;
-}
+
 .header nav {
   position: relative;
   top: 0px;
@@ -90,10 +94,7 @@ $transition: ease-in-out 0.6s;
     background-color: $light-grey;
   }
 }
-.img-style{
-  width: 100%;
-  height: 100%;
-}
+
 #nav-icon {
   width: 30px;
   height: 30px;
@@ -164,6 +165,9 @@ $transition: ease-in-out 0.6s;
   transform: rotate(-135deg);
 }
 
+/* -----------------------------------------------------------------
+    FOOTER
+------------------------------------------------------------------- */
 .main-footer{
  background-color:$light-grey;
  color: $black;
@@ -171,49 +175,23 @@ $transition: ease-in-out 0.6s;
  position: relative;
  bottom:0;
  width:100%;
+ 
 }
 
-.page-container{
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+@media only screen and (min-width: $breakpoint-xsmall) and (max-width: $breakpoint-med) {
+  .main-footer{
+  display: none;
 }
-.content-wrapper{
-  flex:1;
 }
+
 .copy{
   color:$white;
   background-color: $black;
   text-align: center;
-}
-.scroll-to-top div {
-  position: fixed;
-  bottom: 80px;
-  right: 40px;
-  z-index: 3000;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  display: block;
-  cursor: pointer;
-  &.sTt {
-    background-color: $green;
 
-    &:hover {
-      background-color: $green;
-    }
-  
-    &:after {
-      content: "";
-      display: block;
-      background-image: url("../img/icons/arrowUp.svg");
-      width: 50px;
-      height: 50px;
-      background-repeat: no-repeat;
-      cursor: pointer;
-    }
-  }
+  overflow:hidden ;
 }
+
 .list-unstyled{
   display:inline-block;
 }
@@ -224,16 +202,16 @@ $transition: ease-in-out 0.6s;
 background-repeat: no-repeat;
 }
 
-.col ul {
+.col-4 ul {
   margin-left: -20px;
 }
-.col ul li {
+.col-4 ul li {
   list-style-type: none;
   display:block;
   margin-left: 30px;
  
 }
-.col ul li h5 {
+.col-4 ul li h5 {
   margin-top: 10px;
   margin-bottom: 10px;
 }
@@ -246,10 +224,9 @@ background-repeat: no-repeat;
 }
 
 .faqs .faq {
-  margin-right: 25px;
   margin-top: 15px;
   margin-bottom: 15px;
-  margin-left: 30px;
+  margin-right: 25px;
   padding:15px;
   background-color: $grey;
   color:$black;
@@ -269,7 +246,7 @@ background-repeat: no-repeat;
 .faqs .faq .faq-title3{
   position: relative;
   font-size: 15px;
-  padding-right: 30px;
+  padding-right: 0px;
   transition: all 0.3s ease;
   font-weight: 800;
 }
@@ -322,7 +299,7 @@ transform: translateY(-50%);
   opacity: 1;
 }
 
-.Footer2{
+.footerMobTab{
   background-color:$light-grey;
   color: $black;
   padding-top: 3em;
@@ -331,3 +308,25 @@ transform: translateY(-50%);
   width:100%;
   display:block;
 }
+@media only screen and (min-width: $breakpoint-med) {
+  .footerMobTab{
+  display: none;
+}
+}
+
+// .page-container{
+//   display: flex;
+//   flex-direction: column;
+//   min-height: 100vh;
+// }
+// .content-wrapper{
+//   flex:1;
+// }
+
+.img-style{
+  width:100%;
+ height:100%;
+}
+
+
+

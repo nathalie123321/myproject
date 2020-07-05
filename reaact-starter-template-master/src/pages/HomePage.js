@@ -1,14 +1,18 @@
 import React, { Component } from 'react'
+
+//importing components
 import Sections from "../components/dynamicLayout/Sections"
 import Banner from "../components/common/banner"
 import { EventSlider } from "../components/eventSlider";
-import Footer2 from "../components/common/Footer2";
+
+//importing data for my homepage
 import homeData from '../components/pagesData/homedata';
+
 class homePage extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      data:homeData,
+    data:homeData,
     };
   }
 
@@ -21,15 +25,16 @@ class homePage extends Component {
       <Sections
       backgroundColor={sectionStyles.backgroundColor.white}
       padding={sectionStyles.paddingTopBottom}
-      vals={homeData.about}
+      vals={data.about}
       /> 
+      <hr style={{width: "50%"}}></hr>
       <Sections
       backgroundColor={sectionStyles.backgroundColor.white}
       padding={sectionStyles.paddingTopBottom}
-      vals={homeData.yogaBidjam}
+      vals={data.yogaBidjam}
       />
+       <hr style={{width: "50%"}}></hr>
       <EventSlider />
-      <Footer2 />
     </React.Fragment>
     )
   }

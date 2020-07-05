@@ -7,9 +7,11 @@ import Classes from "../pages/classes";
 import Booking from "../pages/booking";
 
 // components
-import HamburgerNav from "./common/hamburgerNav";
+import HeaderNav from "./common/headerNav";
 import ScrollToTop from "./common/scrollToTop";
-import Footer from "./common/Footer";
+import FooterDesktop from "./common/FooterDesktop";
+import FooterMobTab from "./common/FooterMobTab";
+
 import history from "./common/history";
 
 // styles
@@ -20,8 +22,8 @@ export default class componentName extends Component {
     super(props);
     this.state = {
       title: {
-        value: "Yoga Bidjam",
-        color: "title-text"
+      
+       
       },
     sectionStyles:{
         fontColor: {
@@ -47,7 +49,7 @@ export default class componentName extends Component {
         <div className="page-container">
         <div className="content-wrapper">
         <Router history={history}>
-          <HamburgerNav/>
+          <HeaderNav/>
           <Switch>
             <Route
               exact
@@ -72,7 +74,8 @@ export default class componentName extends Component {
         </Router> 
         </div>
         <ScrollToTop />
-        <Footer />
+        <FooterMobTab />
+        <FooterDesktop />
         </div>
     </React.Fragment>
     );
