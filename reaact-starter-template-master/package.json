@@ -1,8 +1,7 @@
 {
-  
-  "name": "y",
+  "name": "yoga",
   "version": "1.0.0",
-  "description": "react template built from the ground up",
+  "description": "yoga website",
   "main": "webpack.config.js",
   "scripts": {
     "check-scripts": "npm-check",
