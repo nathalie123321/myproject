@@ -11,7 +11,7 @@ class headerNav extends Component {
     };
   }
 
-//setting the style for active
+//setting the style for active 
 
   componentDidMount = () => {
     this.setActiveStyle();
@@ -19,6 +19,7 @@ class headerNav extends Component {
 
   animateMenu = () => {
     this.setState({ open: !this.state.open });
+    this.setActiveStyle();
   };
 
   setActiveStyle = () => {

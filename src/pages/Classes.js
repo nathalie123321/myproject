@@ -7,14 +7,13 @@ class classes extends Component {
     super(props);
     this.state = {
     data:classData,
-
     };
   }
     render() {
       let data = classData; 
       let { sectionStyles } = this.props;
       return (
-        <React.Fragment>           
+        <React.Fragment>         
            <Sections            
             padding={sectionStyles.paddingTopBottom}
             vals={data.privat}

@@ -9,7 +9,7 @@ import Booking from "../pages/booking";
 // components
 import HeaderNav from "./common/headerNav";
 import ScrollToTop from "./common/scrollToTop";
-import FooterDesktop from "./common/FooterDesktop";
+import Footer from "./common/Footer";
 import FooterMobTab from "./common/FooterMobTab";
 
 import history from "./common/history";
@@ -75,7 +75,7 @@ export default class componentName extends Component {
         </div>
         <ScrollToTop />
         <FooterMobTab />
-        <FooterDesktop />
+        <Footer />
         </div>
     </React.Fragment>
     );

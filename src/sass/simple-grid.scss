@@ -36,8 +36,8 @@ $breakpoint-large: 60em; // 960px
   margin-left: auto;
   margin-right: auto;
  
-  @media only screen and (min-width: $breakpoint-xsmall) and (max-width: $breakpoint-small) {
-    width: 90%;
+  @media only screen and (max-width: $breakpoint-small) {
+    width: 85%;
   }
 
   @media only screen and (min-width: $breakpoint-small) {
@@ -51,6 +51,7 @@ $breakpoint-large: 60em; // 960px
     max-width: 60rem;
   }
 }
+
 
 .row {
   position: relative;

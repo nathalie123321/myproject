@@ -25,8 +25,10 @@ const about = [
       {
         title: "",
         body: (
-          <React.Fragment>          
+          <React.Fragment> 
+              
           <img className="img-style" src={image1} />
+        
           </React.Fragment>
         ),         
         id: 2,
@@ -38,8 +40,10 @@ const about = [
     {
         title: "",
         body: (
-          <React.Fragment>                
-          <img className="img-style" src={image2} />    
+          <React.Fragment>    
+                      
+          <img className="img-style" src={image2} />  
+        
           </React.Fragment>
         ),
         id: 1,
@@ -48,7 +52,7 @@ const about = [
 
       {       
         title: "Yoga Bidjam",       
-        body: (    
+        body: (  
           <React.Fragment>     
             <p>
               Non qui est cupidatat voluptate elit dolore nulla ipsum amet qui
@@ -60,6 +64,7 @@ const about = [
               ea excepteur excepteur duis. Fugiat laborum anim reprehenderit
               commodo enim cillum qui aliqua sint dolore qui et consectetur.        
             </p> 
+           
              </React.Fragment>         
           ),
           id: 2,

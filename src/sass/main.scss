@@ -9,22 +9,36 @@ body {
   font-size: 100%;
 }
 
+
 /* -----------------------------------------------------------------
     BANNER
 ------------------------------------------------------------------- */
 
 .banner{
+  width: calc(100% - 100px);
+  height: calc(35vh - 100px);
+  min-height: 200px;
+  max-height: 300px;;
+  padding: 50px;
+  position: relative;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
   background-image: url("../img/waterlily.jpg");
-  background-repeat : round;
-  width: 100%;
-  height:300px;
 }
 
 .banner-content{
   text-align: center;
   color: $white;
-  padding-top: 40px;
+      padding-bottom: 50px;
+    width: calc(100% - 10px);
+    height: calc(35vh - 100px);
+    min-height: 200px;
+    padding-top: 50px;
+    margin-top: auto;
+    margin-bottom: auto;
 }
+
 $transition: ease-in-out 0.3s all;
 
 .slide-img{
@@ -64,11 +78,13 @@ $transition: ease-in-out 0.6s;
   top: 0px;
   transition: $transition;
   z-index: 3002;
-  width: 100%;
-  height: 280px;
+  width: calc(80% - 100px);
+  height: calc(35vh - 100px);
+  min-height: 150px;
+  padding:50px;
   background-color: $grey;
+  margin-left: 10%;
   overflow: hidden;
-  padding-top: 20px;
   margin-top: 10px;
 }
 .header nav.hidden {
@@ -83,8 +99,7 @@ $transition: ease-in-out 0.6s;
   font-family: $dancing-script;
   text-transform: uppercase;
   text-align: center;
-  padding: 10px;
-  padding-bottom: 20px;
+  padding: 5px;
   display: block;
   width: calc(100% - 20px);
   &:hover {
@@ -94,6 +109,33 @@ $transition: ease-in-out 0.6s;
     background-color: $light-grey;
   }
 }
+
+@media only screen and (max-width: $breakpoint-med) {
+  .header nav{
+    width: calc(100% - 100px);
+    margin-left: 0%;
+  }
+}
+
+@media only screen and (min-width: $breakpoint-med) {
+  .header nav{
+    width: 25%;  
+    margin-left: 64%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 30px;
+    padding-right: 20px;
+    margin-top: 10px;
+    height: 170px;
+  }
+}
+
+
+.header nav h2{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 
 #nav-icon {
   width: 30px;
@@ -168,62 +210,66 @@ $transition: ease-in-out 0.6s;
 /* -----------------------------------------------------------------
     FOOTER
 ------------------------------------------------------------------- */
-.main-footer{
- background-color:$light-grey;
- color: $black;
- padding-top: 3em;
- position: relative;
- bottom:0;
- width:100%;
- 
+.footer{
+  background-color:$light-grey;
+  color:$black;
+  padding-top: 40px;
+}
+.footer h4{
+  font-size: 1.166em;
+  font-family: $roboto;
+}
+.footer h5{
+  margin-left: 30px;
+  font-weight: 700;
+  margin-bottom:10px;
+} 
+.footer p{
+  margin-left: 50px;
+}
+.footer a  {
+  font-size: small;
+  display: block;
+  color:$black;
+  margin-left: 40px;
 }
 
-@media only screen and (min-width: $breakpoint-xsmall) and (max-width: $breakpoint-med) {
-  .main-footer{
-  display: none;
+.footerMt a  {
+  font-size: small;
+  display: block;
+  color:$black;
 }
+
+.icon{
+  margin-left: 15px;
+  background-repeat: no-repeat;
+}
+
+.icon p{
+  margin-left: 35px;
+}
+
+@media only screen and  (max-width: $breakpoint-med) {
+  .footer{
+    display: none;
+  }
 }
 
 .copy{
   color:$white;
   background-color: $black;
   text-align: center;
-
   overflow:hidden ;
 }
 
-.list-unstyled{
-  display:inline-block;
-}
-.icons-text p{
-  margin-left: 30px;
-}
-.icon{
-background-repeat: no-repeat;
-}
-
-.col-4 ul {
-  margin-left: -20px;
-}
-.col-4 ul li {
-  list-style-type: none;
-  display:block;
-  margin-left: 30px;
- 
-}
-.col-4 ul li h5 {
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-.faqs {
+.footerMt{
   width: 100%;
   max-width: 768;
   margin: 0 auto;
   padding: 15px;
 }
 
-.faqs .faq {
+.footerMt .faq {
   margin-top: 15px;
   margin-bottom: 15px;
   margin-right: 25px;
@@ -234,37 +280,41 @@ background-repeat: no-repeat;
   box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
 }
 
-.faqs .faq .faq-mainTitle{
+.footerMt .faq .faq-mainTitle{
   position: relative;
-  font-size: 18px;
+  font-size: 17px;
   padding-right: 80px;
   transition: all 0.3s ease;
   font-weight: 800;
+  font-family: $roboto;
 }
-.faqs .faq .faq-title,
-.faqs .faq .faq-title2,
-.faqs .faq .faq-title3{
+
+.footerMt .faq .faq-title,
+.footerMt .faq .faq-title2,
+.footerMt .faq .faq-title3{
   position: relative;
   font-size: 15px;
   padding-right: 0px;
   transition: all 0.3s ease;
   font-weight: 800;
 }
-.faqs .faq .faq-mainTitle::after{
+
+.footerMt .faq .faq-mainTitle::after{
 content: '';
-position: absolute;
-top:50%;
-right:0px;
-transform: translateY(-50%);
-width:30px;
-height:30px;
-background-image: url('../img/icons/plus.svg');
-background-position: center;
-background-size: contain;
-background-repeat: no-repeat;
-transition: all 0.3s ease;
+  position: absolute;
+  top:50%;
+  right:0px;
+  transform: translateY(-50%);
+  width:30px;
+  height:30px;
+  background-image: url('../img/icons/plus.svg');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: all 0.3s ease;
 }
-.faqs .faq .faq-title,
+
+.footerMt .faq .faq-title,
 .faq-text1,
 .faq-text2,
 .faq-text3,
@@ -272,29 +322,33 @@ transition: all 0.3s ease;
 .faq-text4,
 .faq-title3,
 .faq-text5  {
-opacity: 0;
-max-height: 0;
-overflow-y: hidden;
-
+  opacity: 0;
+  max-height: 0;
+  overflow-y: hidden;
 }
 
-.faqs .faq.open .faq-mainTitle{
-margin-bottom: 15px;
+.footerMt .faq.open .faq-mainTitle{
+  margin-bottom: 15px;
 }
 
-.faqs .faq.open .faq-mainTitle::after{
-background-image: url('../img/icons/minus.svg');
-transform: translateY(-50%);
+.footerMt .faq.open .faq-mainTitle::after{
+  background-image: url('../img/icons/minus.svg');
+  transform: translateY(-50%);
 }
 
-.faqs .faq.open .faq-title, 
-.faqs .faq.open .faq-text1, 
-.faqs .faq.open .faq-text2, 
-.faqs .faq.open .faq-text3,
-.faqs .faq.open .faq-title2,
-.faqs .faq.open .faq-text4,
-.faqs .faq.open .faq-title3,
-.faqs .faq.open .faq-text5 {
+.footerMt .faq.open .faq-title, 
+.footerMt .faq.open .faq-title2,
+.footerMt .faq.open .faq-title3{ 
+  max-height: 1000px;
+  opacity: 1;
+}
+
+.footerMt .faq.open .faq-text1, 
+.footerMt .faq.open .faq-text2, 
+.footerMt .faq.open .faq-text3,
+.footerMt .faq.open .faq-text4,
+.footerMt .faq.open .faq-text5 {
+  margin-left:50px;
   max-height: 1000px;
   opacity: 1;
 }
@@ -308,25 +362,23 @@ transform: translateY(-50%);
   width:100%;
   display:block;
 }
+.follow h4{
+  font-size: 17px;
+}
 @media only screen and (min-width: $breakpoint-med) {
   .footerMobTab{
   display: none;
 }
-}
 
-// .page-container{
-//   display: flex;
-//   flex-direction: column;
-//   min-height: 100vh;
-// }
-// .content-wrapper{
-//   flex:1;
-// }
+}
 
 .img-style{
   width:100%;
- height:100%;
 }
 
-
-
+@media only screen and (min-width: $breakpoint-small)  and (max-width: $breakpoint-med) {
+  .img-style{
+      width: 90%;
+      margin-left: 15px;
+    }
+  }

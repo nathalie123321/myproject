@@ -7,9 +7,9 @@ class Sections extends Component {
     let paddingTopBottom = padding ? padding : "";
     let backgroundColorLocal = backgroundColor ? backgroundColor : "";
     return (
-      <section className={backgroundColorLocal + " " + paddingTopBottom + " " + fontColor}>
+      <section key="" className={backgroundColorLocal + " " + paddingTopBottom + " " + fontColor}>
         <div className="container">
-          <DynamicCols vals={vals}/>
+          <DynamicCols key={vals.id} vals={vals}/>
         </div>
       </section>
     );

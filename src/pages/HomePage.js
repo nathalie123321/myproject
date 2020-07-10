@@ -25,13 +25,13 @@ class homePage extends Component {
       <Sections
       backgroundColor={sectionStyles.backgroundColor.white}
       padding={sectionStyles.paddingTopBottom}
-      vals={data.about}
+      vals={homeData.about}
       /> 
       <hr style={{width: "50%"}}></hr>
       <Sections
       backgroundColor={sectionStyles.backgroundColor.white}
       padding={sectionStyles.paddingTopBottom}
-      vals={data.yogaBidjam}
+      vals={homeData.yogaBidjam}
       />
        <hr style={{width: "50%"}}></hr>
       <EventSlider />

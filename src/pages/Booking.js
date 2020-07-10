@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import Sections from "../components/dynamicLayout/Sections"
 
-
 class booking extends Component {
   constructor(props) {
     super(props);
@@ -163,7 +162,6 @@ class booking extends Component {
             padding={sectionStyles.paddingTopBottom}
             vals={organisation}
           />
-        
         </React.Fragment>
         )
     }
